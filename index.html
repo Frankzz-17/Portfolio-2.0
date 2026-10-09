@@ -3,273 +3,334 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Franz Manrique | Portfolio</title>
+    <meta name="description" content="Franz Manrique, Game Development graduate and graphic designer specializing in 3D modeling, gameplay programming, level design and branding.">
+    <title>Franz Manrique | Game Developer &amp; Graphic Designer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <div class="logo">
-            <img src="image/F_logo.png" alt="Frankz">
-        </div>
-        <ul>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <li><a href="#education">EDUCATION</a></li>
-            <li><a href="#experience">EXPERIENCE</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
-    </nav>
-
-    <header id="home">
-  
+    <!-- Navigation -->
+    <header class="site-header" id="siteHeader">
+        <nav class="nav">
+            <a href="#home" class="logo" aria-label="Back to top">
+                <img src="image/F_logo.png" alt="Franz Manrique logo">
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#designs">Designs</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <section id="about">
-        <div class="about-wrapper">
-            <div class="about-image-container">
-                <div class="about-image">
+
+    <main>
+        <!-- Hero -->
+        <section id="home" class="hero">
+            <div class="container hero-inner">
+                <p class="eyebrow">Game Developer &middot; 3D Artist &middot; Graphic Designer</p>
+                <h1>Franz Manrique</h1>
+                <p class="hero-sub">Game Development graduate specializing in 3D modeling, gameplay programming and level design, now also creating graphic designs for branding, apparel and print.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#designs" class="btn btn-ghost">See Designs</a>
+                    <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="section">
+            <div class="container about-grid">
+                <div class="about-photo">
                     <img src="image/franz1.png" alt="Franz Mari P. Manrique">
                 </div>
-            </div>
-            <div class="about-text-container">
-                <h2>Franz Manrique</h2>
-                <p>A passionate Game Development student with expertise in 3D modeling, programming, and level design. I create immersive interactive experiences and constantly push my boundaries to achieve excellence in game development.</p>
-            </div>
-        </div>
-    </section>
-
-    
-    <section id="projects">
-        <h1>PROJECTS</h1>
-        <div class="project-grid" id="projectGrid">
-            <div class="project-card unity" data-project="santelmo" data-video="image/santelmo-video.mp4" data-images="image/santelmo5.png,image/santelmo1.jpg,image/santelmo2.jpg,image/santelmo3.jpg,image/santelmo4.jpg">
-                <div class="project-img">
-                    <img src="image/santelmo.png" alt="Santelmo game cover art">
-                </div>
-                <div class="project-info">
-                    <h3>SANTELMO [2025]</h3>
-                    <p>• Mytihc Bicol Game Jam •</p>
-                    <p> 3D Action-Adventure | Unity </p>
-                    
+                <div class="about-text">
+                    <h2 class="section-title left">About Me</h2>
+                    <p>I'm a Game Development graduate with experience in 3D modeling, programming and level design. I build immersive, interactive experiences, and I've also started taking on graphic design work such as logos, branding, apparel and print layouts. I keep pushing myself to improve with every project.</p>
+                    <ul class="facts">
+                        <li><span>Based in</span> Naga City, Philippines</li>
+                        <li><span>Focus</span> 3D Art &middot; Gameplay &middot; Level Design &middot; Graphic Design</li>
+                        <li><span>Engine</span> Unity (C#)</li>
+                    </ul>
                 </div>
             </div>
+        </section>
 
-            <div class="project-card unity" data-project="road-ready" data-video="image/road-ready-video.mp4" data-images="image/road4.png,image/road3.png,image/road1.png,image/road2.png">
-                <div class="project-img">
-                    <img src="image/road ready.png" alt="Road ready Game Poster">
-                </div>
-                <div class="project-info">
-                    <h3>Road Ready [2025]</h3>
-                    <p>• Capstone Project •</p>
-                    <p>3D Driving Simulator | Unity </p>
+        <!-- Projects -->
+        <section id="projects" class="section alt">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-sub">Select a project to see my role, tools, gameplay video and screenshots.</p>
+
+                <div class="project-grid" id="projectGrid">
+
+                    <article class="project-card" data-project="road-ready" tabindex="0" role="button" aria-label="Open Road Ready details">
+                        <div class="project-img"><img src="image/road ready.png" alt="Road Ready game poster" loading="lazy"></div>
+                        <div class="project-info">
+                            <span class="tag">Capstone Project &middot; 2025</span>
+                            <h3>Road Ready</h3>
+                            <p>3D Driving Simulator &middot; Unity</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-project="lost" tabindex="0" role="button" aria-label="Open Lost details">
+                        <div class="project-img"><img src="image/lost1.png" alt="Lost game screenshot" loading="lazy"></div>
+                        <div class="project-info">
+                            <span class="tag">Final Project &middot; 2025</span>
+                            <h3>Lost</h3>
+                            <p>3D Survival-Platformer &middot; Unity</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-project="santelmo" tabindex="0" role="button" aria-label="Open Santelmo details">
+                        <div class="project-img"><img src="image/santelmo.png" alt="Santelmo game cover art" loading="lazy"></div>
+                        <div class="project-info">
+                            <span class="tag">Mythic Bicol Game Jam &middot; 2025</span>
+                            <h3>Santelmo</h3>
+                            <p>3D Action-Adventure &middot; Unity</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-project="lume" tabindex="0" role="button" aria-label="Open Lume details">
+                        <div class="project-img"><img src="image/lume.jpeg" alt="Lume poster" loading="lazy"></div>
+                        <div class="project-info">
+                            <span class="tag">Brackeys Game Jam &middot; 2025</span>
+                            <h3>Lume</h3>
+                            <p>3D Platformer &middot; Unity</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-project="dont-get-fooled" tabindex="0" role="button" aria-label="Open Don't Get Fooled details">
+                        <div class="project-img"><img src="image/Dont Get Fooled.png" alt="Don't Get Fooled game poster" loading="lazy"></div>
+                        <div class="project-info">
+                            <span class="tag">Final Project &middot; 2025</span>
+                            <h3>Don't Get Fooled</h3>
+                            <p>2D Side-Scrolling Platformer &middot; Unity</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-project="balut-quest" tabindex="0" role="button" aria-label="Open Balut's Quest details">
+                        <div class="project-img"><img src="image/b1.png" alt="Balut's Quest screenshot" loading="lazy"></div>
+                        <div class="project-info">
+                            <span class="tag">Final Project &middot; 2024</span>
+                            <h3>Balut's Quest</h3>
+                            <p>2D Platformer Shooter &middot; Unity</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-project="allen-denz" tabindex="0" role="button" aria-label="Open Allen and Denz Quest details">
+                        <div class="project-img"><img src="image/a1.png" alt="Allen and Denz Quest screenshot" loading="lazy"></div>
+                        <div class="project-info">
+                            <span class="tag">Final Project &middot; 2024</span>
+                            <h3>Allen &amp; Denz Quest</h3>
+                            <p>2D Co-op Platformer &middot; Unity</p>
+                        </div>
+                    </article>
+
                 </div>
             </div>
-            
-            <div class="project-card unity" data-project="dont-get-fooled" data-video="image/dont-get-fooled-video.mp4" data-images="image/dont1.jpg,image/dont2.jpg,image/dont3.jpg,image/dont4.jpg">
-                <div class="project-img">
-                    <img src="image/Dont Get Fooled.png" alt="Don't Get Fooled Game Poster">
-                </div>
-                <div class="project-info">
-                    <h3>Don't Get fooled [2025]</h3>
-                     <p>• Final Project •</p>
-                    <p>2D Side-Scrolling Platformer | Unity.</p>
-                </div>
-            </div>
+        </section>
 
-            <div class="project-card unity" data-project="lume" data-video="image/lume-video.mp4" data-images="image/l1.png,image/l2.png">
-                <div class="project-img">
-                    <img src="image/lume.jpeg" alt="lume Poster">
-                </div>
-                <div class="project-info">
-                    <h3>Lume [2025]</h3>
-                    <p>• Brackeys Game Jam •</p>
-                    <p>3D Platformer | Unity </p>
-                </div>
-            </div>
+        <!-- Designs -->
+        <section id="designs" class="section">
+            <div class="container">
+                <h2 class="section-title">Graphic Designs</h2>
+                <p class="section-sub">Branding, apparel and card designs. Select one to view the full set.</p>
 
-             <div class="project-card unity" data-project="allen-denz" data-video="image/allen-denz-video.mp4" data-images="image/a1.png,image/a2.png,image/a3.png">
-                <div class="project-img">
-                    <img src="image/a1.png" alt="allen and denz">
-                </div>
-                <div class="project-info">
-                    <h3>Allen & Denz Quest [2024]</h3>
-                     <p>• Final Project •</p>
-                    <p>2D Side-Scrolling Platformer | Multiplayer | Unity</p>
-                </div>
-            </div>
-            <div class="project-card unity" data-project="balut-quest" data-video="image/balut-quest-video.mp4" data-images="image/b1.png,image/b2.png,image/b3.png,image/b4.png">
-                <div class="project-img">
-                    <img src="image/b1.png" alt="balut quest">
-                </div>
-                <div class="project-info">
-                    <h3>Balut's Quest [2024]</h3>
-                    <p>• Final Project •</p>
-                    <p>2D Platformer Shooting | Unity</p>
-                </div>
-            </div>
-            <div class="project-card unity" data-project="lost" data-video="image/balut-quest-video.mp4" data-images="image/b1.png,image/b2.png,image/b3.png,image/b4.png">
-                <div class="project-img">
-                    <img src="image/lost1.png" alt="balut quest">
-                </div>
-                <div class="project-info">
-                    <h3>Lost [2025]</h3>
-                    <p>• Final Project •</p>
-                    <p>3D Survival-Platformer | Unity</p>
-                </div>
-            </div>
+                <div class="design-grid" id="designGrid">
 
-        </div>
-    </section>
+                    <article class="design-card wide" data-design="cloud-studios" tabindex="0" role="button" aria-label="Open Cloud Studios branding">
+                        <div class="design-img"><img data-base="image/Cloud Studios StoreFront MockUps" alt="Cloud Studios signage mockup" loading="lazy"></div>
+                        <div class="design-info">
+                            <span class="tag">Branding &middot; Logo &amp; Identity</span>
+                            <h3>Cloud Studios</h3>
+                            <p>Logo, cloud pattern, business cards and signage</p>
+                        </div>
+                    </article>
 
-    
+                    <article class="design-card wide" data-design="tarp" tabindex="0" role="button" aria-label="Open Congratulatory Tarpaulin">
+                        <div class="design-img"><img data-base="image/tarp original" alt="Congratulatory tarpaulin design with gold and navy theme" loading="lazy"></div>
+                        <div class="design-info">
+                            <span class="tag">Print &middot; Tarpaulin</span>
+                            <h3>Congratulatory Tarpaulin</h3>
+                            <p>Large-format layout for a licensure exam achievement</p>
+                        </div>
+                    </article>
 
-    <section id="education">
-        <h1>EDUCATION</h1>
-        <div class="education-box">
-            <div class="edu-item">
-                <h3>Bicol State College of Applied Sciences and Technology (2022-2026)</h3>
-                <p>Bachelor of Science in Entertainment and Multimedia Computing</p>
-                <p>Major in Game Development</p>
-            </div>
-        </div>
-    </section>
+                    <article class="design-card" data-design="element-cards" tabindex="0" role="button" aria-label="Open Periodic Element Cards">
+                        <div class="design-img"><img data-base="image/ElemenTical Final Card Design" alt="Periodic element trading cards" loading="lazy"></div>
+                        <div class="design-info">
+                            <span class="tag">Card Design &middot; Print</span>
+                            <h3>Periodic Element Cards</h3>
+                            <p>Collectible science card set with color-coded families</p>
+                        </div>
+                    </article>
 
-    <section id="experience">
-        <h1>TECHNICAL EXPERIENCE</h1>
-        <div class="experience-container">
-            <div class="experience-box">
-                <h3>Game Development:</h3>
-                <div class="skill-badges">
-                    <span class="badge badge-dark">Unity</span>
-                    <span class="badge badge-cyan">C#</span>
-                    <span class="badge badge-cyan">Unity Shader</span>
-                    <span class="badge badge-gold">Blender</span>
-                    <span class="badge badge-teal">Maya</span>
-                    <span class="badge badge-red">Substance Painter</span>
+                    <article class="design-card" data-design="newjeans-jersey" tabindex="0" role="button" aria-label="Open Bunnies Jersey">
+                        <div class="design-img"><img data-base="image/Sample Design 1" alt="Blue and white bunnies jersey front and back" loading="lazy"></div>
+                        <div class="design-info">
+                            <span class="tag">Apparel &middot; Jersey</span>
+                            <h3>Bunnies Jersey</h3>
+                            <p>Custom raglan jersey with name and number</p>
+                        </div>
+                    </article>
+
+                    <article class="design-card" data-design="honoo-shirt" tabindex="0" role="button" aria-label="Open Honoo Flame Shirt">
+                        <div class="design-img"><img data-base="image/Sample Design 2" alt="Grey shirt with black flame pattern" loading="lazy"></div>
+                        <div class="design-info">
+                            <span class="tag">Apparel &middot; T-Shirt</span>
+                            <h3>Honoo Flame Shirt</h3>
+                            <p>Monochrome flame print with Japanese typography</p>
+                        </div>
+                    </article>
+
+                    <article class="design-card" data-design="dino-shirt" tabindex="0" role="button" aria-label="Open Dinosaur shirt">
+                        <div class="design-img"><img data-base="image/Dinojaur T-shirt MockUps" alt="Green dinosaur shirt mockup" loading="lazy"></div>
+                        <div class="design-info">
+                            <span class="tag">Apparel &middot; Pixel Art</span>
+                            <h3>Dinosaur?</h3>
+                            <p>Dithered pixel-art illustration for a graphic tee</p>
+                        </div>
+                    </article>
+
                 </div>
             </div>
+        </section>
 
-            
-        </div>
-    </section>
+        <!-- Skills -->
+        <section id="skills" class="section alt">
+            <div class="container narrow">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <h3>Game Development</h3>
+                        <div class="chips">
+                            <span>Unity</span>
+                            <span>C#</span>
+                            <span>Unity Shader</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Graphic Design</h3>
+                        <div class="chips">
+                            <span>Branding &amp; Logos</span>
+                            <span>Apparel Design</span>
+                            <span>Print Layout</span>
+                            <span>Mockups</span>
+                            <span>Pixel Art</span>
+                            <span>Photoshop</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>3D &amp; Art</h3>
+                        <div class="chips">
+                            <span>Blender</span>
+                            <span>Maya</span>
+                            <span>Substance Painter</span>
+                            <span>Photoshop</span>
+                            <span>Aseprite</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
- <section id="contact">
-    <h2>CONTACT ME</h2>
-    <div class="contact-container">
-        <p>Let's collaborate! Reach out to me via my social channels.</p>
+        <!-- Education -->
+        <section id="education" class="section">
+            <div class="container narrow">
+                <h2 class="section-title">Education</h2>
+                <div class="edu-card">
+                    <span class="tag">2022 &ndash; 2026 &middot; Graduate</span>
+                    <h3>Bicol State College of Applied Sciences and Technology</h3>
+                    <p>Bachelor of Science in Entertainment and Multimedia Computing</p>
+                    <p class="muted">Major in Game Development</p>
+                </div>
+            </div>
+        </section>
 
-        <ul class="contact-info">
-            <li>frankzmanrique@gmail.com</li>
-            <li> Naga City, Philippines</li>
-        </ul>
+        <!-- Contact -->
+        <section id="contact" class="section alt">
+            <div class="container narrow contact">
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-sub">I'm open to game development and graphic design opportunities, including full-time roles, internships and freelance projects. Feel free to reach out.</p>
+                <a href="mailto:frankzmanrique@gmail.com" class="btn btn-primary">
+                    <i class="fa-regular fa-envelope"></i> frankzmanrique@gmail.com
+                </a>
+                <p class="location"><i class="fa-solid fa-location-dot"></i> Naga City, Philippines</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Franz.Manrique17" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://github.com/Frankzz-17" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        <div class="social-links">
-            <a href="https://www.facebook.com/Franz.Manrique17" target="_blank" aria-label="Facebook">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://github.com/Frankzz-17" target="_blank" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="" target="_blank" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-           
-        </div>
-    </div>
-</section>
+    <footer class="footer">
+        <p>&copy; 2026 Franz Manrique</p>
+    </footer>
 
-   
-    <button id="backToTop" title="Go to top">
+    <button id="backToTop" title="Go to top" aria-label="Go to top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-  <!-- Project Details Page -->
-  <div id="projectDetails" class="project-details hidden">
-    <button class="project-details-close" id="closeProjectDetails">
-        <i class="fa-solid fa-xmark"></i>
-    </button>
-    
-    <div class="project-details-content">
-      <h2 id="projectTitle">Project Title</h2>
-      
-      <!-- Game Description -->
-      <div class="project-description-section">
-        <p id="projectDescription">Game description goes here...</p>
-      </div>
+    <!-- Project Details -->
+    <div id="projectDetails" class="project-details hidden" role="dialog" aria-modal="true" aria-labelledby="projectTitle">
+        <button class="project-details-close" id="closeProjectDetails" aria-label="Close project details">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
 
-      <!-- Contributions Section -->
-      <div class="project-contributions-section">
-        <h3>Key Contributions</h3>
-        <div class="contributions-box">
-          <div class="general-role">
-            <span class="role-label">General Role:</span>
-            <span id="projectGeneralRole">Role here</span>
-          </div>
-          <ul class="contributions-list" id="projectContributions"></ul>
+        <div class="project-details-content">
+            <h2 id="projectTitle">Project Title</h2>
+            <p class="details-description" id="projectDescription"></p>
+
+            <div class="details-meta">
+                <div><span class="info-label">Role</span><span id="projectRole"></span></div>
+                <div><span class="info-label">Tools</span><span id="projectTools"></span></div>
+                <div><span class="info-label">Platform</span><span id="projectPlatform"></span></div>
+                <div><span class="info-label">Date</span><span id="projectDate"></span></div>
+            </div>
+
+            <div class="contributions-box">
+                <h3>Key Contributions</h3>
+                <p class="general-role"><span class="role-label">General role:</span> <span id="projectGeneralRole"></span></p>
+                <ul class="contributions-list" id="projectContributions"></ul>
+            </div>
+
+            <div class="details-block">
+                <h3>Gameplay</h3>
+                <div class="gameplay-video-wrapper">
+                    <iframe id="projectVideo" class="gameplay-video" title="Project Gameplay" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="details-block">
+                <h3>Screenshots</h3>
+                <div class="screenshots-grid" id="screenshotsGrid"></div>
+            </div>
         </div>
-      </div>
-      
-      <!-- Project Info (Inline Row Format) -->
-      <div class="project-info-inline">
-        <div class="info-item-inline">
-          <span class="info-label">Role:</span>
-          <span id="projectRole">Game Developer</span>
-        </div>
-        <div class="info-item-inline">
-          <span class="info-label">Tools:</span>
-          <span id="projectTools">Unity, C#</span>
-        </div>
-        <div class="info-item-inline">
-          <span class="info-label">Platform:</span>
-          <span id="projectPlatform">PC</span>
-        </div>
-        <div class="info-item-inline">
-          <span class="info-label">Date Created:</span>
-          <span id="projectDate">2024</span>
-        </div>
-      </div>
-      
-      <!-- Gameplay Video -->
-      <div class="project-gameplay-section">
-        <h3>Gameplay</h3>
-        <div class="gameplay-video-wrapper">
-          <iframe id="projectVideo" class="gameplay-video" 
-              title="Project Gameplay"
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-      
-      <!-- Screenshots Grid -->
-      <div class="project-screenshots-section">
-        <h3>Gameplay Screenshots</h3>
-        <div class="screenshots-grid" id="screenshotsGrid"></div>
-      </div>
     </div>
-  </div>
 
-  <!-- Image Modal for Screenshot Zoom -->
-  <div id="projectModal" class="modal">
-    <div class="modal-image-wrapper">
-      <button class="modal-nav-btn modal-prev" id="modalPrev">
-        <i class="fa-solid fa-chevron-left"></i>
-      </button>
-      <div class="modal-img-container">
-        <span class="close">&times;</span>
-        <img id="modalImage" class="modal-content">
-      </div>
-      <button class="modal-nav-btn modal-next" id="modalNext">
-        <i class="fa-solid fa-chevron-right"></i>
-      </button>
+    <!-- Screenshot viewer -->
+    <div id="projectModal" class="modal">
+        <button class="close" aria-label="Close image">&times;</button>
+        <button class="modal-nav-btn modal-prev" id="modalPrev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+        <img id="modalImage" class="modal-content" alt="Screenshot preview">
+        <button class="modal-nav-btn modal-next" id="modalNext" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+        <p id="modalCaption" class="modal-caption"></p>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
