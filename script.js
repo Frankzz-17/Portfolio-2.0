@@ -91,8 +91,8 @@ const designsData = {
     'cloud-studios': {
         title: 'Cloud Studios',
         images: [
-            { src: 'image/Artboard 1 copy 4', caption: 'Cloud Studios: primary logo' },
-            { src: 'image/Design 2', caption: 'Cloud Studios: outline cloud pattern' },
+            { src: 'image/Design 2', caption: 'Cloud Studios: primary logo' },
+            { src: 'image/Artboard 1 copy 4', caption: 'Cloud Studios: outline cloud pattern' },
             { src: 'image/Cloud Studios Business Card MockUps', caption: 'Cloud Studios: business card mockup' },
             { src: 'image/Cloud Studios StoreFront MockUps', caption: 'Cloud Studios: storefront signage mockup' }
         ]
